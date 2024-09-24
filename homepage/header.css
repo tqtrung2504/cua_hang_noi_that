@@ -1,0 +1,57 @@
+.header .logo, footer .col a{
+    font-size: 2.5rem;
+    font-family: 'Comforter', cursive,'Calligrafitti';
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--dark);
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 5rem;
+    height: 80px;
+    background-color: #dbd0d0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#navBar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navBar li{
+    list-style: none;
+    padding: 0 1.2rem;
+    position: relative;
+}
+
+.header ul li a{
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--dark);
+    transition: .5s ease;
+}
+
+.header ul li a:hover,
+.header ul li a.active{
+    color: var(--hover);
+}
+
+.header ul li a.active::after,
+.header ul li a:hover::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: var(--hover);
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}

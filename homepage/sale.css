@@ -1,0 +1,43 @@
+.pro-container_sale-off{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 36px;
+    text-align: center;
+    background-color: #FFD840;
+
+}
+.pro-container_sale-off::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    border-width: 0 20px 4px;
+    border-style: solid;
+    border-color: transparent orange transparent orange;
+}
+.pro-container_sale-off-percent{
+    color: #EE4D2D;
+    font-weight: 600;
+    font-size: 1.3rem;
+    line-height: 1.3rem;
+}
+.home-product-price{
+    display: flex;
+    margin-left: 10px;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+.home-product-price-old{
+    margin-left: -10px;
+    font-size: 1.4rem;
+    color: #070707;
+    text-decoration: line-through;
+
+}
+.home-product-price-new{
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    margin-left: 50px;
+}

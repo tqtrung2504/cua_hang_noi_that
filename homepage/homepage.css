@@ -1,0 +1,82 @@
+:root{
+    --lightdark: #222;
+    --dark: #000000;
+    --light: #ffffff;
+    --primary: #465b52;
+    --secondary: #e3e6f3;
+    --hover: #8d6a4e;;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Signika', sans-serif;
+}
+
+h1{
+    font-size: 3rem;
+    line-height: 4rem;
+    font-weight: 700;
+    color: #638889;
+}
+
+h2{
+    font-size: 2.6rem;
+    line-height: 3.5rem;
+    color: #fafafa;
+}
+
+h4{  
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+h6{
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #8d6a4e;
+}
+
+p{
+    font-size: 1.1rem;
+    color: #9E9FA5;
+}
+
+.section-p1{
+    padding: 40px 80px;
+}
+
+.section-m1{
+    margin: 40px 0;
+}
+
+body{
+    width: 100%;
+}
+
+button.normal {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 13px 28px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: .3s ease;
+}
+
+button.white {
+    font-size: 13px;
+    font-weight: 600;
+    padding: 12px 18px;
+    color: #fff;
+    background-color: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #fff;
+    outline: none;
+    transition: .3s ease;
+}
