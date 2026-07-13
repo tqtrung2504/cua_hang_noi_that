@@ -1,0 +1,44 @@
+pipeline {
+
+    agent any
+
+    stages {
+
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Verify') {
+            steps {
+                dir('homepage') {
+                    sh 'ls -la'
+                    sh 'test -f homepage.html'
+                }
+            }
+        }
+
+        stage('Build Docker') {
+            steps {
+                dir('homepage') {
+                    sh 'docker build -t furniture-ui .'
+                }
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                sh '''
+                docker stop furniture || true
+                docker rm furniture || true
+
+                docker run -d \
+                    --name furniture \
+                    -p 80:80 \
+                    furniture-ui
+                '''
+            }
+        }
+    }
+}
